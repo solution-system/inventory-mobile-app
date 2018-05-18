@@ -8,7 +8,7 @@
         PhoneGap Team
     </author>
     <content src="index.html" />
-    <preference name="phonegap-version" value="cli-6.3.1" />
+    <preference name="phonegap-version" value="cli-6.5.0" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.2.4" />
