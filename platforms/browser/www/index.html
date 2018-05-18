@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Inventory Control</title>
+ 
+        <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" crossorigin="anonymous">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"  crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+        <script src="js/sqlhandler.js"></script>
+        <script type="text/javascript" charset="utf-8">
+            // Wait for Cordova to load
+            //
+            document.addEventListener("deviceready", onDeviceReady, false);
+        </script>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
+                <div class="panel panel-primary">
+                    <div class="heading">Enter Inventory Details Here
+                    </div>
+                    <div class="panel-body">
+                        <form name="myform" class="form-horizontal">
+                            <div class="form-group error">
+                                <label for="item">Item*</label>
+                                <input id="item" name="item" class="form-control" type="text" data-validation="required">
+                                <span id="error_item" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="code">Code#</label>
+                                <input id="code" name="code" class="form-control" type="text">
+                                <span id="error_code" class="text-danger"></span>
+                            </div>
+                            <div class="form-group error">
+                                <label for="category">Category *</label>
+                                <select id="category" name="category"  class="form-control">                                    
+                                    <option>Dairy</option>
+                                    <option>Fruit</option>
+                                    <option>Grocery</option>
+                                    <option>Vegetable</option>
+                                </select>
+                                <span id="error_category" class="text-danger"></span>
+                            </div>
+                            <div class="form-group error">
+                                <label for="dop">Date Of Purchase *</label>
+                                <input type="date" name="dop" id="dop" class="form-control">
+                                <span id="error_dop" class="text-danger"></span>
+                            </div>
+                            <div class="form-group error">
+                                <label for="store">Store *</label>
+                                <select name="store" id="store" class="form-control">
+                                    <option>Airport</option>
+                                    <option>Saddar</option>
+                                    <option>Site</option>
+                                </select>
+                                <span id="error_store" class="text-danger"></span>
+                            </div>
+                            <!-- <div class="form-group">
+                                    <label for="phone">Phone Number *</label>
+                                    <input type="text" id="phone" name="phone" class="form-control" >
+                                    <span id="error_phone" class="text-danger"></span>
+                            </div> -->
+                            <div class="form-group">
+                                <label for="desc">description</label>
+                                <textarea id="desc" class="form-control" rows="3"></textarea>
+                            </div>
+
+                            <!--  					<button id="submit" type="submit" value="submit" class="btn btn-primary center">Submit</button>-->
+                            <input  class="btn btn-primary center" type="button" value="Add Record" onClick="javascript: AddValueToDB()">
+                            <input  class="btn btn-primary center" type="button" value="Refresh" onClick="javascript: ListDBValues();"> <br>
+                            <input style="padding: 20; margin-top: 10; float: right" class="btn btn-danger" type="button" value="Reset Databse" onClick="javascript: if (confirm('ALERT: All Record(s) will be deleted!!')) { del_catalog(); }"> <br>
+                            <br>
+                            <!--<span style="font-weight:bold;">Currently stored values:</span>-->
+                            <span id="lbl_Catalogues"></span>
+                            <span id="lbl_error"></span>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+<!--        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+          app.initialize();
+        </script>-->
+    </body>
+
+</html>

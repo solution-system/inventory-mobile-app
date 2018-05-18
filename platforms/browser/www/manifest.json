@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Inventory",
+  "short_name": "Inventory",
+  "version": "com.phonegap.store",
+  "description": "Hello World sample application that responds to the deviceready event.",
+  "author": "PhoneGap Team",
+  "icons": [],
+  "start_url": "index.html"
+}
